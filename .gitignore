@@ -1,0 +1,10 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+/README.md
+/README-template.md
+/style-guide.md
+
+/design
