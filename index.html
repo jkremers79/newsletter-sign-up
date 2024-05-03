@@ -17,7 +17,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="content-wrapper">
+      <div class="sign-up">
         <picture>
           <source
             media="(min-width: 800px)"
@@ -25,7 +25,7 @@
           />
           <img src="./assets/images/illustration-sign-up-mobile.svg" />
         </picture>
-        <div class="content">
+        <div class="sign-up-overview">
           <h1>Stay updated!</h1>
           <p>Join 60,000+ product managers receiving monthly updates on:</p>
           <ul>
@@ -33,29 +33,31 @@
             <li>Measuring to ensure updates are a success</li>
             <li>And much more!</li>
           </ul>
-          <!-- </div> -->
 
-          <!-- <div class="sign-up"> -->
           <form>
-            <label for="email">Email address</label>
+            <div class="message">
+              <label for="email">Email address</label>
+              <p class="err_msg"></p>
+            </div>
             <input
               id="email"
               placeholder="email@company.com"
               type="email"
-              required
+              class="email-input"
             />
-            <button type="submit">Subscribe to monthly newsletter</button>
+            <button type="submit" class="submit-button">
+              Subscribe to monthly newsletter
+            </button>
           </form>
         </div>
-
-        <!-- Success message start -->
-        <!-- 
-    Thanks for subscribing! A confirmation email has been sent to
-    ash@loremcompany.com. Please open it and click the button inside to confirm
-    your subscription. Dismiss message -->
-
-        <!-- Success message end -->
       </div>
+      <div class="submit_succes">
+        <img src="./assets/images/icon-succes.svg" width="75px" height="75px" />
+        <h1>Thanks for subscribing!</h1>
+        <p class="confirmation_text"></p>
+        <button class="dismiss-button">Dismiss message</button>
+      </div>
+
       <div class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"

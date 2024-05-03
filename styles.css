@@ -20,99 +20,127 @@ body {
   align-items: center;
 }
 
-.content-wrapper {
+.sign-up {
+  padding: 1rem;
+  padding-top: 0;
   width: min(100%, 500px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
+  background-color: hsl(0, 0%, 100%);
 }
 
 img {
   width: 100%;
 }
 
-.content {
+h1 {
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+li::before {
+  content: url("./assets/images/icon-list.svg");
+  position: absolute;
+  left: -40px;
+  top: -1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+input {
+  border-radius: 10px;
   padding: 1rem;
+  border: 1px solid hsl(0, 0%, 78%);
+  margin-top: 0.5rem;
+}
 
-  ul {
-    list-style: none;
-  }
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 
-  li {
-    margin-bottom: 1rem;
-    position: relative;
-  }
-
-  li::before {
-    content: url("./assets/images/icon-list.svg");
-    position: absolute;
-    left: -2.5rem;
-    top: -1px;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input {
-    border-radius: 10px;
-    padding: 1rem;
-    border: 1px solid hsl(0, 0%, 78%);
-    margin-top: 0.5rem;
-  }
-
-  label {
-    font-family: "Roboto Bold";
-    font-weight: bold;
-    font-size: 0.75em;
-  }
-
-  button {
-    border-radius: 10px;
-    border: none;
-    padding: 1rem;
-    background-color: hsl(234, 26%, 21%);
-    color: hsl(218, 67%, 98%);
-    margin-top: 1.5rem;
+  p {
+    font-size: 0.75rem;
+    color: hsl(4, 34%, 61%);
+    margin: 0;
   }
 }
 
-/* .content {
-  max-width: 450px;
+input.invalid {
+  background-color: hsl(5, 100%, 95%);
+  border: 1px solid hsl(4, 34%, 61%);
+  color: hsl(4, 34%, 61%);
+}
+
+input:focus {
+  border: 1px solid hsl(0, 0%, 12%);
+  outline: none;
+}
+
+label {
+  font-family: "Roboto Bold";
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 1rem;
+  background-color: hsl(234, 26%, 21%);
+  color: hsl(218, 67%, 98%);
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-image: linear-gradient(
+    90deg,
+    hsl(348, 100%, 66%),
+    hsl(11, 100%, 63%)
+  );
+  box-shadow: 0 4px 15px 0 hsl(348, 100%, 66%);
+}
+
+.submit_succes {
+  width: 300px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
   padding: 1rem;
 
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  input {
-    border-radius: 10px;
-    padding: 1rem;
-    border: 1px solid hsl(0, 0%, 78%);
-    margin-top: 0.5rem;
-  }
-
-  label {
-    font-family: "Roboto bold";
-    color: hsl(234, 26%, 21%);
-    font-weight: bold;
-    font-size: 0.75em;
+  img {
+    margin-top: 7rem;
+    width: fit-content;
+    align-self: flex-start;
   }
 
   button {
-    border-radius: 10px;
-    border: none;
-    padding: 1rem;
-    background-color: hsl(234, 26%, 21%);
-    color: hsl(218, 67%, 98%);
-    margin-top: 1.5rem;
+    margin-top: 7rem;
+    width: 80%;
   }
-} */
+
+  span {
+    font-family: "Roboto bold";
+    font-weight: bold;
+  }
+}
 
 .attribution {
   margin-top: 1rem;
@@ -129,33 +157,53 @@ img {
     background-color: hsl(235, 16%, 27%);
   }
 
-  .content-wrapper {
-    margin: 1rem;
-    width: min(85%, 800px);
-    height: 500px;
-    gap: 1rem;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 20px;
-    padding: 2rem;
-  }
-
-  img {
-    height: 500px;
-  }
-
   h1 {
     font-size: 2.5rem;
     margin-top: 0;
   }
 
-  .content {
-    align-self: flex-start;
-    padding: 2rem;
+  .sign-up {
+    width: min(85%, 800px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1.5rem;
+    gap: 2rem;
+    flex-direction: row-reverse;
+    align-items: center;
 
     form {
       margin-top: 3rem;
+    }
+
+    .sign-up-overview {
+      align-self: flex-start;
+    }
+  }
+
+  .submit_succes {
+    width: 400px;
+    padding: 4rem;
+    border-radius: 20px;
+
+    h1 {
+      font-family: "Robot bold";
+      font-weight: bold;
+    }
+
+    img {
+      margin: 2rem 0 2rem 0;
+      width: fit-content;
+      align-self: flex-start;
+    }
+
+    button {
+      margin: 2rem;
+    }
+
+    span {
+      font-family: "Roboto bold";
+      font-weight: bold;
     }
   }
 
